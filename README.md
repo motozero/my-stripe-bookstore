@@ -6,21 +6,21 @@ This is a responsive ecommerce web app where Buyers can buy books from a Seller.
 
 I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 user actions listed below. I extended it to support user actions 4-7 as well.
 
-## User Actions
+### User Actions
 1. Select one or more books to purchase.
 2. Checkout and purchase the item using Stripe Elements.
 3. Display a confirmation of purchase to the user with the total amount of the charge and Stripe charge ID (beginning with ch_).
-4. Sign-Up to create an account.
-5. Sign-In and Sign-Out of created account.
+4. Sign Up to create an account.
+5. Sign In and Out of created account.
 6. If signed in, during a purchase save a credit card number for use in a future transaction.
 7. If signed in, during a purchase use a previously saved credit card.
 
-## Installation
+# Installation
   
-#### To set up and run a local version of the app that supports User Actions 1-3 above, follow steps 1-4 below.
+### To set up and run a local version of the app that supports User Actions 1-3 above, follow steps 1-4 below.
 
 1. Clone this repo locally.
-2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
+2. Update the Stripe API Keys.  If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
 
 A. In the root of your `client` directory create a `.env` file and add the following (updating the `REACT_APP_PUBLISHABLE_KEY` with your own): 
 ```
@@ -35,41 +35,65 @@ WEB_APP_URL=http://localhost:3000
 GOOGLE_APPLICATION_CREDENTIALS="./service-account.json"
 SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
 ```
-3. From the command line, in your `server` run `npm install` to install dependencies then `npm start` to start the server. You should see <a href="https://bit.ly/36KeUTY">this</a>.
+3. From the command line, in your `server` directory run `npm install` to install dependencies then `npm start` to start the server. You should see <a href="https://bit.ly/36KeUTY">this</a>.
 4. From the command line, in your `client` directory run `npm install` to install dependencies then `npm start` to start the client. You should see <a href="https://bit.ly/3kDjbk0">this</a>.
 
-#### To add support for User Actions 4-7, follow steps 5 and 6.
+### To add support for User Actions 4-7, follow steps 5 and 6.
 
 5. From Firebase.com create a Firebase application and connect a Firestore Database and Authentication service.
 6. Update service-account.json and client/src/firebase/index.js with your Firebase Credentials.
 
-#### To set up and run a remote version of the app (like on AWS, Digital Ocean, etc. on a public facing hostname of your choice) follow these additional steps.
+### To set up and run a remote version of the app (like on AWS, Digital Ocean, etc. on a public facing hostname of your choice) follow these additional steps.
 
-7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname. For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
+7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname.  For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
 
-8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname. For reference mine is set to https://node.motochristo.com.
+8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname.  For reference mine is set to https://node.motochristo.com.
 
-9. Update the server configuration to map requests for port 8080 to the domain running node. If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
+9. Update the server configuration to map requests for port 8080 to the domain running node.  If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
 
 10. Follow Steps 3 and 4 from above to install the server and client dependencies and then start the server.
 
-#### From here you should have a fully functional, responsive ecommerce web app running on a remote server like you see <a href="https://books.motochristo.com">here</a>.
+From here you should have a fully functional, responsive ecommerce web app running on a remote server.
 
-## FAQ
+# FAQ
 
 Q: How does it work? Which Stripe APIs does it use? <br />
-A: ...
+A: See Diagram <a href=”https://b.stripecdn.com/docs/assets/accept-a-payment-web.3c58b380538c59796acc587164c05365.png”>here</a>.
+
+<a href=”https://reactjs.org/”>React</a> is used to manage the client side of the app. This includes displaying the responsive web bookstore and keeping track of the app’s state as a user adds/removes items to/from the cart and goes through the checkout process.
+
+When a user (aka a “customer” according to the diagram) clicks “checkout” their browser navigates to a /checkout page where they are prompted to enter their Shipping data and click “Continue”.
+
+Once completed, the user sees a new empty form prompting them to enter their credit card data next.
+
+At the same time React on the front end calls the node server on the back end and basically tells it “hey this user is about to make a purchase, ping Stripe’s API to create a Payment Intent instance and get back a Client Secret”.  Then the Node server does so and passes the Client Secret back to React.
+
+Next the user enters their credit card data and clicks “Pay”.  At this point the React front end takes the credit card data, encrypts it and sends it to Stripe from the user’s browser coupled with the Client Secret.
+
+Stripe takes the Client Secret, the Credit Card data and the amount to run the transaction.  Upon a successful transaction Stripe returns a successful confirmation to the React front end.  
+
+Then the React front end navigates to the /success page with the Payment Intent ID in the URL.  This success page contains code to ping Stripe’s Payment Intent API to confirm the charge and to retrieve the amount and Charge ID of the transaction.
 
 Q: How did you approach this problem: which docs did you use to complete the project? What challenges did you encounter? <br />
-A: ...
+A: (TBD - A paragraph or two)
+
+Docs:
+https://www.udemy.com/course/stripe-masterclass-with-react-node/
+https://stripe.com/docs/api/payment_intents
+https://stripe.com/docs/api/charges/object
+https://stripe.com/docs/payments/payment-intents
+https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=elements
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 Q: How you might extend this if you were building a more robust instance of the same application? <br />
-A: ...
+A: (TBD - A paragraph or two)
 
-## Questions, Comments or Compliments? Ping me.
+# Questions, Comments or Compliments?
+
+Please ping me...
 
 @motochristo <br />
 motochristo@gmail.com <br />
 https://www.linkedin.com/in/christopherbroberts/
+
