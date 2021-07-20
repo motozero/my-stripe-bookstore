@@ -10,8 +10,8 @@ I created this app in response to this <a href="https://github.com/mattmitchell6
 1. Select one or more books to purchase.
 2. Checkout and purchase the item using Stripe Elements.
 3. Display a confirmation of purchase to the user with the total amount of the charge and Stripe charge ID (beginning with ch_).
-4. Sign Up to create an account.
-5. Sign In and Out of created account.
+4. Sign-Up to create an account.
+5. Sign-In and Sign-Out of created account.
 6. If signed in, during a purchase save a credit card number for use in a future transaction.
 7. If signed in, during a purchase use a previously saved credit card.
 
@@ -20,7 +20,7 @@ I created this app in response to this <a href="https://github.com/mattmitchell6
 #### To set up and run a local version of the app that supports User Actions 1-3 above, follow steps 1-4 below.
 
 1. Clone this repo locally.
-2. Update the Stripe API Keys.  If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
+2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
 
 A. In the root of your `client` directory create a `.env` file and add the following (updating the `REACT_APP_PUBLISHABLE_KEY` with your own): 
 ```
@@ -45,11 +45,11 @@ SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
 
 #### To set up and run a remote version of the app (like on AWS, Digital Ocean, etc. on a public facing hostname of your choice) follow these additional steps.
 
-7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname.  For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
+7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname. For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
 
-8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname.  For reference mine is set to https://node.motochristo.com.
+8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname. For reference mine is set to https://node.motochristo.com.
 
-9. Update the server configuration to map requests for port 8080 to the domain running node.  If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
+9. Update the server configuration to map requests for port 8080 to the domain running node. If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
 
 10. Follow Steps 3 and 4 from above to install the server and client dependencies and then start the server.
 
@@ -58,20 +58,17 @@ SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
 ## FAQ
 
 Q: How does it work? Which Stripe APIs does it use? <br />
-A: 
-The app works 
+A: ...
 
 Q: How did you approach this problem: which docs did you use to complete the project? What challenges did you encounter? <br />
-A: (TBD - A paragraph or two)
+A: ...
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 Q: How you might extend this if you were building a more robust instance of the same application? <br />
-A: (TBD - A paragraph or two)
+A: ...
 
-## Questions, Comments or Compliments?
-
-Please ping me...
+## Questions, Comments or Compliments? Ping me.
 
 @motochristo <br />
 motochristo@gmail.com <br />
