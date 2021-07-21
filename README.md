@@ -38,7 +38,7 @@ SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
 3. From the command line, in your `server` directory run `npm install` to install dependencies then `npm start` to start the server. You should see <a href="https://bit.ly/36KeUTY">this</a>.
 4. From the command line, in your `client` directory run `npm install` to install dependencies then `npm start` to start the client. You should see <a href="https://bit.ly/3kDjbk0">this</a>.
 
-  ### To add support for User Actions 4-7, follow steps 5 and 6. (<a href="">Video Walkthrough)</a>)
+  ### To add support for User Actions 4-7, follow steps 5 and 6. (<a href="https://bit.ly/3x672Hf">Video Walkthrough)</a>)
 
 5. From Firebase.com create a Firebase application and connect a Firestore Database and Authentication service.
 6. From within your Project, go to Project Settings to find the Firebase JSON object you'll need to include in client/src/firebase/index.js and you'll be able to create a JSON file with your Firebase Private Key that you'll need to add to your `server` root directory.
