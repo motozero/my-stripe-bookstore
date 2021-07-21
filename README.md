@@ -2,7 +2,7 @@
 
 <a href="https://books.motochristo.com">CLICK HERE</a> to see the final product.
 
-This is a responsive ecommerce web app where Buyers can buy books from a Seller. It is built using Node to handle the back end, React to handle the front end, Express to handle the middleware, a Firebase Database and Authentication service for Buyer Sign-Up/Sign-In/Sign-Out and Stripe Buyer Sign-Up, Buyer Purchasing using a Saved Card and Payments. 
+This is a responsive ecommerce web app where Buyers can buy books from a Seller. It is built using Node to handle the back end, React to handle the front end, Express to handle the middleware, a Firebase Database and Authentication service for Buyer Sign-Up/Sign-In/Sign-Out and Stripe for Buyer Sign-Up, Buyer Purchasing using a Saved Card and Payments. 
 
 I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 User Actions listed below. I extended it to support User Actions 4-7 as well.
 
