@@ -57,7 +57,7 @@ From here you should have a fully functional, responsive ecommerce web app runni
 
 # FAQ
 
-### Q: How does it work? Which Stripe APIs does it use? <br />
+  ### Q: How does it work? Which Stripe APIs does it use? (<a href="https://bit.ly/36TuYCI">Video Walkthrough</a>)<br />
   
 This <a href="https://bit.ly/3Bo2oHN">Diagram</a> outlines the checkout process that is at the core of User Actions 1-3.
 
