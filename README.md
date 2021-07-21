@@ -6,7 +6,7 @@ This is a responsive ecommerce web app where Buyers can buy books from a Seller.
 
 I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 User Actions listed below. I extended it to support User Actions 4-7 as well.
 
-### User Actions
+  ### User Actions (<a href="https://bit.ly/3wXibtN">Video Walkthrough</a>)
 1. Select one or more books to purchase.
 2. Checkout and purchase the item using Stripe Elements.
 3. Display a confirmation of purchase to the user with the total amount of the charge and Stripe charge ID (beginning with ch_).
