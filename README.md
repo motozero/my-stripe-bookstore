@@ -82,7 +82,7 @@ First I watched and built along with <a href="https://www.udemy.com/course/strip
 Here are a few of the many docs I found very helpful: 
 * https://www.udemy.com/course/stripe-masterclass-with-react-node
 * https://stripe.com/docs/api/payment_intents
-* https://stripe.com/docs/api/charges/object
+* https://stripe.com/docs/api/charges
 * https://stripe.com/docs/payments/payment-intents
 * https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=elements
 * https://stripe.com/blog/stripe-extension-for-vs-code
