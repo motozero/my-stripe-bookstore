@@ -2,7 +2,7 @@
 
 <a href="https://books.motochristo.com">CLICK HERE</a> to see the final product.
 
-This is a responsive ecommerce web app where Buyers can buy books from a Seller. It is built using Node to handle the back end, React to handle the front end, Express to handle the middleware, a Firebase Database and Authentication service for Buyer Sign-Up/Sign-In/Sign-Out and Stripe Buyer Sign-Up, Buyer Purchasing using a Saved Card and Payments.  
+This is a responsive ecommerce web app where Buyers can buy books from a Seller. It is built using Node to handle the back end, React to handle the front end, Express to handle the middleware, a Firebase Database and Authentication service for Buyer Sign-Up/Sign-In/Sign-Out and Stripe Buyer Sign-Up, Buyer Purchasing using a Saved Card and Payments. 
 
 I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 User Actions listed below. I extended it to support User Actions 4-7 as well.
 
@@ -20,7 +20,7 @@ I created this app in response to this <a href="https://github.com/mattmitchell6
 ### To set up and run a local version of the app that supports User Actions 1-3 above, follow steps 1-4 below.
 
 1. Clone this repo locally.
-2. Update the Stripe API Keys.  If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
+2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
 
 A. In the root of your `client` directory create a `.env` file and add the following (updating the `REACT_APP_PUBLISHABLE_KEY` with your own): 
 ```
@@ -45,11 +45,11 @@ SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
 
 ### To set up and run a remote version of the app (like on AWS, Digital Ocean, etc. on a public facing hostname of your choice) follow these additional steps.
 
-7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname.  For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
+7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname. For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
 
-8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname.  For reference mine is set to https://node.motochristo.com.
+8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname. For reference mine is set to https://node.motochristo.com.
 
-9. Update the server configuration to map requests for port 8080 to the domain running node.  If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
+9. Update the server configuration to map requests for port 8080 to the domain running node. If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
 
 10. Follow Steps 3 and 4 from above to install the server and client dependencies and then start the server.
 
@@ -67,17 +67,17 @@ When a user (aka a “customer” according to the diagram) clicks “checkout�
 
 Once completed, the user sees a new empty form prompting them to enter their credit card data next.
 
-At the same time React on the front end calls the node server on the back end and basically tells it “hey this user is about to make a purchase, ping Stripe’s API to create a Payment Intent instance and get back a Client Secret”.  Then the Node server does so and passes the Client Secret back to React.
+At the same time React on the front end calls the node server on the back end and basically tells it “hey this user is about to make a purchase, ping Stripe’s API to create a Payment Intent instance and get back a Client Secret”. Then the Node server does so and passes the Client Secret back to React.
 
-Next the user enters their credit card data and clicks “Pay”.  At this point the React front end takes the credit card data, encrypts it and sends it to Stripe from the user’s browser coupled with the Client Secret.
+Next the user enters their credit card data and clicks “Pay”. At this point the React front end takes the credit card data, encrypts it and sends it to Stripe from the user’s browser coupled with the Client Secret.
 
-Stripe takes the Client Secret, the Credit Card data and the amount to run the transaction.  Upon a successful transaction Stripe returns a successful confirmation to the React front end.  
+Stripe takes the Client Secret, the Credit Card data and the amount to run the transaction. Upon a successful transaction Stripe returns a successful confirmation to the React front end. 
 
-Then the React front end navigates to the /success page with the Payment Intent ID in the URL.  This success page contains code to ping Stripe’s Payment Intent API to confirm the charge and to retrieve the amount and Charge ID of the transaction which both get displayed on the /success page.
+Then the React front end navigates to the /success page with the Payment Intent ID in the URL. This success page contains code to ping Stripe’s Payment Intent API to confirm the charge and to retrieve the amount and Charge ID of the transaction which both get displayed on the /success page.
 
 ### Q: How did you approach this problem: which docs did you use to complete the project? What challenges did you encounter?
 
-First I watched and built along with this tutorial - https://www.udemy.com/course/stripe-masterclass-with-react-node/. Next I dove deeper into React, Node, and Stripe. Once I had a local version working as expected for the most part I tried hosting it remotely in many different environments (including Netlify, Vercel, Github Pages, AWS and Linode) before eventually settling on Digital Ocean running Ubuntu 20.04.  Next I found and employed a React/Node tutor on fiverr.com to streamline my learning and to pair program through building out functionality not included in the tutorial such as displaying the Charge ID.
+First I watched and built along with this tutorial - https://www.udemy.com/course/stripe-masterclass-with-react-node/. Next I dove deeper into React, Node, and Stripe. Once I had a local version working as expected for the most part I tried hosting it remotely in many different environments (including Netlify, Vercel, Github Pages, AWS and Linode) before eventually settling on Digital Ocean running Ubuntu 20.04. Next I found and employed a React/Node tutor on fiverr.com to streamline my learning and to pair program through building out functionality not included in the tutorial such as displaying the Charge ID.
 
 Here are a few of the many docs I found very helpful: 
 * https://www.udemy.com/course/stripe-masterclass-with-react-node
