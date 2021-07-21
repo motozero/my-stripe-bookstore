@@ -77,7 +77,7 @@ Then the React front end navigates to the /success page with the Payment Intent 
 
 ### Q: How did you approach this problem: which docs did you use to complete the project? What challenges did you encounter?
 
-First I watched and built along with <a href="https://www.udemy.com/course/stripe-masterclass-with-react-node/"this tutorial</a>. Next I dove deeper into React, Node, and Stripe. Once I had a local version working as expected for the most part I tried hosting it remotely in many different environments (including Netlify, Vercel, Github Pages, AWS and Linode) before eventually settling on Digital Ocean running Ubuntu 20.04. Next I found and employed a React/Node tutor on fiverr.com to streamline my learning and to pair program through building out functionality not included in the tutorial such as displaying the Charge ID.
+First I watched and built along with <a href="https://www.udemy.com/course/stripe-masterclass-with-react-node/">this tutorial</a>. Next I dove deeper into React, Node, and Stripe. Once I had a local version working as expected for the most part I tried hosting it remotely in many different environments (including Netlify, Vercel, Github Pages, AWS and Linode) before eventually settling on Digital Ocean running Ubuntu 20.04. Next I found and employed a React/Node tutor on fiverr.com to streamline my learning and to pair program through building out functionality not included in the tutorial such as displaying the Charge ID.
 
 Here are a few of the many docs I found very helpful: 
 * https://www.udemy.com/course/stripe-masterclass-with-react-node
