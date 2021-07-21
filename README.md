@@ -4,7 +4,7 @@
 
 This is a responsive ecommerce web app where Buyers can buy books from a Seller. It is built using Node to handle the back end, React to handle the front end, Express to handle the middleware, a Firebase Database and Authentication service for Buyer Sign-Up/Sign-In/Sign-Out and Stripe Buyer Sign-Up, Buyer Purchasing using a Saved Card and Payments.  
 
-I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 user actions listed below. I extended it to support user actions 4-7 as well.
+I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 User Actions listed below. I extended it to support User Actions 4-7 as well.
 
 ### User Actions
 1. Select one or more books to purchase.
@@ -58,7 +58,9 @@ From here you should have a fully functional, responsive ecommerce web app runni
 # FAQ
 
 ### Q: How does it work? Which Stripe APIs does it use? <br />
-### A: See <a href=”https://bit.ly/3Bo2oHN”>Diagram</a>.
+### A: 
+  
+This <a href="https://bit.ly/3Bo2oHN">Diagram</a> outlines the checkout process that is at the core of User Actions 1-3.
 
 <a href=”https://reactjs.org/”>React</a> is used to manage the client side of the app. This includes displaying the responsive web bookstore and keeping track of the app’s state as a user adds/removes items to/from the cart and goes through the checkout process.
 
@@ -95,5 +97,4 @@ Please ping me...
 
 @motochristo <br />
 motochristo@gmail.com <br />
-https://www.linkedin.com/in/christopherbroberts/
-
+https://www.linkedin.com/in/christopherbroberts
