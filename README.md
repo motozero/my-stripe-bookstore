@@ -57,8 +57,8 @@ From here you should have a fully functional, responsive ecommerce web app runni
 
 # FAQ
 
-Q: How does it work? Which Stripe APIs does it use? <br />
-A: See Diagram <a href=”https://b.stripecdn.com/docs/assets/accept-a-payment-web.3c58b380538c59796acc587164c05365.png”>here</a>.
+### Q: How does it work? Which Stripe APIs does it use? <br />
+### A: See <a href=”https://bit.ly/3Bo2oHN”>Diagram</a>.
 
 <a href=”https://reactjs.org/”>React</a> is used to manage the client side of the app. This includes displaying the responsive web bookstore and keeping track of the app’s state as a user adds/removes items to/from the cart and goes through the checkout process.
 
@@ -74,8 +74,8 @@ Stripe takes the Client Secret, the Credit Card data and the amount to run the t
 
 Then the React front end navigates to the /success page with the Payment Intent ID in the URL.  This success page contains code to ping Stripe’s Payment Intent API to confirm the charge and to retrieve the amount and Charge ID of the transaction.
 
-Q: How did you approach this problem: which docs did you use to complete the project? What challenges did you encounter? <br />
-A: (TBD - A paragraph or two)
+### Q: How did you approach this problem: which docs did you use to complete the project? What challenges did you encounter? <br />
+### A: (TBD - A paragraph or two)
 
 Docs:
 https://www.udemy.com/course/stripe-masterclass-with-react-node/
@@ -86,8 +86,8 @@ https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=elements
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-Q: How you might extend this if you were building a more robust instance of the same application? <br />
-A: (TBD - A paragraph or two)
+### Q: How you might extend this if you were building a more robust instance of the same application? <br />
+### A: (TBD - A paragraph or two)
 
 # Questions, Comments or Compliments?
 
