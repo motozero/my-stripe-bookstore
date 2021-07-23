@@ -19,7 +19,8 @@ I created this app in response to this <a href="https://github.com/mattmitchell6
   
 ### To set up and run a local version of the app that supports User Actions 1-3 above, follow steps 1-4 below.
 
-1. Clone this repo locally.
+1. Clone this repo locally, then from the command line navigate to `client` and run `npm i` to install the required dependencies and then `cd ../server` and in the `sever` directory run `npm i`.
+  
 2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
 
 A. In the root of your `client` directory create a `.env` file and add the following (updating the `REACT_APP_PUBLISHABLE_KEY` with your own): 
