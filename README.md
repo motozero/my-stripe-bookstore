@@ -2,15 +2,13 @@
 
 <a href="https://books.motochristo.com">CLICK HERE</a> to see the final product.
 
-  ### What is this?
+### What is this?
 
-In response to <a href="https://github.com/mattmitchell6/sa-takehome-project-node">this Take Home Project<a/>, this is a responsive, ecommerce web app with a custom checkout workflow implmented using Stripe.
+This is an easily customizable, responsive, ecommerce web app using Stripe for managing payments and storing credit cards for future use.
 
-The base tech stack is Stripe, Node, React and Express.  This supports the complete shopping and checkout user experiences.  The extended tech stack includes a Firestore Database and a related Authentication service, both cloud services provided by Google via Firebase.com.  This extends the user experience to include buyer sign-up/sign-in/sign-out, and buying with a saved card. 
+The base tech stack is Stripe, Node, React and Express.  This supports the complete shopping and checkout user experiences.  The extended tech stack includes a Firestore Database and a related Authentication service, both cloud services provided by Google via Firebase.com.  This extends the user experience to include buyer sign-up/sign-in/sign-out, and buying with a saved card.
 
-The take home project was coupled with an email prompt that requested the app support the first 3 User Actions listed below.  This repo extends the base app to support User Actions 4-7 as well.
-
-  ### User Actions (<a href="https://bit.ly/3wXibtN">Video Walkthrough</a>)
+### User Actions (<a href="https://bit.ly/3wXibtN">Video Walkthrough</a>)
 1. Select one or more books to purchase.
 2. Checkout and purchase the item using Stripe Elements.
 3. Display a confirmation of purchase to the user with the total amount of the charge and Stripe charge ID (beginning with ch_).
@@ -19,9 +17,18 @@ The take home project was coupled with an email prompt that requested the app su
 6. If signed in, during a purchase save a credit card number for use in a future transaction.
 7. If signed in, during a purchase use a previously saved credit card.
 
-# Installation
+### Installation
   
-1. Clone this repo locally, then from the command line navigate to `client` and run `npm i` to install the required dependencies and then `cd ../server` and in the `sever` directory run `npm i`.
+1. To clone this repo and install `client` and `server` dependencies respectively run...
+
+```
+git clone https://github.com/motozero/bookstore
+cd bookstore/client
+npm i
+cd ../server
+npm i
+
+```
   
 2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
 
@@ -29,33 +36,21 @@ A. In the root of your `client` directory create a `.env` file and add the follo
 ```
 NODE_PORT=8080
 REACT_APP_WEB_SERVER_URL=http://localhost:${NODE_PORT}
-REACT_APP_PUBLISHABLE_KEY=pk_test_insert_your_own_stripe_api_publishable_key_here...
+REACT_APP_PUBLISHABLE_KEY=pk_test_goes_here
 ```
 B. In the root of your `server` directory create a `.env` file and add the following (updating the `SECRET_KEY` with your own): 
 ```
 NODE_PORT=8080
 WEB_APP_URL=http://localhost:3000
 GOOGLE_APPLICATION_CREDENTIALS="./service-account.json"
-SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
+SECRET_KEY="sk_test_goes_here"
 ```
-3. From the command line, in your `server` directory run `npm install` to install dependencies then `npm start` to start the server. You should see <a href="https://bit.ly/36KeUTY">this</a>.
-4. From the command line, in your `client` directory run `npm install` to install dependencies then `npm start` to start the client. You should see <a href="https://bit.ly/3kDjbk0">this</a>.
 
-5. From Firebase.com create a Firebase application and connect a Firestore Database and Authentication service.
+3. From Firebase.com create a project and an app and connect a Firestore NoSQL Database and an Authentication service.  From within your Firebase Project, go to Project Settings to find the Firebase JSON object you'll need to include in client/src/firebase/index.js.  Next create a JSON file with your Firebase Private Key, rename it to `service-account.json` and add it to your `server` root directory.
+  
+4. From the `server` directory run `npm start` to start the node server and then from the `client` directory run `npm start` to start the app server.
 
-6. From within your Project, go to Project Settings to find the Firebase JSON object you'll need to include in client/src/firebase/index.js and you'll be able to create a JSON file with your Firebase Private Key that you'll need to add to your `server` root directory.
-
-### To set up and run a remote version of the app (like on AWS, Digital Ocean, etc. on a public facing hostname of your choice) follow these additional steps.
-
-7. In your server's `.env` file update the value of `WEB_APP_URL` to point to your <i><b>web server's</b></i> hostname. For reference mine is set to https://books.motochristo.com. Note, this will work over http but it's recommended to run it over https for security purposes.
-
-8. In your client's `.env` file update the value of `REACT_APP_WEB_SERVER_URL` to point to your <i><b>node server's</b></i> hostname. For reference mine is set to https://node.motochristo.com.
-
-9. Update the server configuration to map requests for port 8080 to the domain running node. If needed, learn more <a href="https://www.twilio.com/blog/react-app-with-node-js-server-proxy">here</a>.
-
-10. Follow Steps 3 and 4 from above to install the server and client dependencies and then start the server.
-
-From here you should have a fully functional, responsive ecommerce web app running on a remote server.
+From here you should have a fully functional, responsive ecommerce web app running on a local server.
 
 # FAQ
 
