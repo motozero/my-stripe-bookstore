@@ -2,9 +2,13 @@
 
 <a href="https://books.motochristo.com">CLICK HERE</a> to see the final product.
 
-This is a responsive ecommerce web app where Buyers can buy books from a Seller. It is built using Node to handle the back end, React to handle the front end, Express to handle the middleware, a Firebase Database and Authentication service for Buyer Sign-Up/Sign-In/Sign-Out and Stripe for Buyer Sign-Up, Buyer Purchasing using a Saved Card and Payments. 
+  ### What is this?
 
-I created this app in response to this <a href="https://github.com/mattmitchell6/sa-takehome-project-node">Take Home Project<a/> which was coupled with an email prompt that requested the app support the first 3 User Actions listed below. I extended it to support User Actions 4-7 as well.
+In response to <a href="https://github.com/mattmitchell6/sa-takehome-project-node">this Take Home Project<a/>, this is a responsive, ecommerce web app with a custom checkout workflow implmented using Stripe.
+
+The base tech stack is Stripe, Node, React and Express.  This supports the complete shopping and checkout user experiences.  The extended tech stack includes a Firestore Database and a related Authentication service, both cloud services provided by Google via Firebase.com.  This extends the user experience to include buyer sign-up/sign-in/sign-out, and buying with a saved card. 
+
+The take home project was coupled with an email prompt that requested the app support the first 3 User Actions listed below.  This repo extends the base app to support User Actions 4-7 as well.
 
   ### User Actions (<a href="https://bit.ly/3wXibtN">Video Walkthrough</a>)
 1. Select one or more books to purchase.
@@ -17,8 +21,6 @@ I created this app in response to this <a href="https://github.com/mattmitchell6
 
 # Installation
   
-### To set up and run a local version of the app that supports User Actions 1-3 above, follow steps 1-4 below.
-
 1. Clone this repo locally, then from the command line navigate to `client` and run `npm i` to install the required dependencies and then `cd ../server` and in the `sever` directory run `npm i`.
   
 2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
@@ -39,9 +41,8 @@ SECRET_KEY="sk_test_insert_your_own_stripe_api_secret_key_here..."
 3. From the command line, in your `server` directory run `npm install` to install dependencies then `npm start` to start the server. You should see <a href="https://bit.ly/36KeUTY">this</a>.
 4. From the command line, in your `client` directory run `npm install` to install dependencies then `npm start` to start the client. You should see <a href="https://bit.ly/3kDjbk0">this</a>.
 
-  ### To add support for User Actions 4-7, follow steps 5 and 6. (<a href="https://bit.ly/3x672Hf">Video Walkthrough)</a>)
-
 5. From Firebase.com create a Firebase application and connect a Firestore Database and Authentication service.
+
 6. From within your Project, go to Project Settings to find the Firebase JSON object you'll need to include in client/src/firebase/index.js and you'll be able to create a JSON file with your Firebase Private Key that you'll need to add to your `server` root directory.
 
 ### To set up and run a remote version of the app (like on AWS, Digital Ocean, etc. on a public facing hostname of your choice) follow these additional steps.
