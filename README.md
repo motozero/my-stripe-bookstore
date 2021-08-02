@@ -27,7 +27,6 @@ cd bookstore/client
 npm i
 cd ../server
 npm i
-
 ```
   
 2. Update the Stripe API Keys. If needed, learn more <a href="https://bit.ly/2V2NAgQ">here</a>.
