@@ -17,6 +17,13 @@ The base tech stack is Stripe, Node, React and Express.  This supports the compl
 6. If signed in, during a purchase save a credit card number for use in a future transaction.
 7. If signed in, during a purchase use a previously saved credit card.
 
+### Prequisties
+* Server running node, react, express
+* A terminal tool, I use iTerm2
+* Google Account, you can open a new one for this project in a couple of clicks if you need to.
+* Stripe.com Account (free for testing)
+* Firebase.com Acccount (free for testing)
+
 ### Installation
   
 1. To clone this repo and install `client` and `server` dependencies respectively run...
