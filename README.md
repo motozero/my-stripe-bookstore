@@ -2,7 +2,7 @@
 
 ### What is this?
 
-This is an easily customizable, responsive, ecommerce web app using Stripe for managing payments and storing credit cards for future use.
+This is an easily customizable, responsive, ecommerce web app using Stripe for  payments and storing credit cards for future use.
 
 The base tech stack is Stripe, Node, React and Express.  This supports the complete shopping and checkout user experiences.  The extended tech stack includes a Firestore Database and a related Authentication service, both cloud services provided by Google via Firebase.com.  This extends the user experience to include buyer sign-up/sign-in/sign-out, and buying with a saved card.
 
