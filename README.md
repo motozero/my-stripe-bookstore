@@ -1,7 +1,5 @@
 # Christo's Bookstore
 
-<a href="https://books.motochristo.com">CLICK HERE</a> to see the final product.
-
 ### What is this?
 
 This is an easily customizable, responsive, ecommerce web app using Stripe for managing payments and storing credit cards for future use.
