@@ -1,4 +1,4 @@
-# Christo's Bookstore
+# My Stripe Bookstore
 
 ### What is this?
 
